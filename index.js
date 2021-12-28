@@ -17,8 +17,10 @@ image2.setAttribute("src", randomImageSource2)  //set source attribute
 // Change heading on conditions 
 if (randomNumber1 > randomNumber2) {    // if player1 wins 
     document.querySelector("h1").innerHTML = "🚩 Player 1 Wins!"
-} else if (randomNumber2 > randomNumber1) {     // if player2 wins
-    document.querySelector("h1").innerHTML = "Player 2 Wins! "
-} else {    // if both are same
+}
+else if (randomNumber2 > randomNumber1) {     // if player2 wins
+    document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩"
+} 
+else {    // if both are same
     document.querySelector("h1").innerHTML = "Draw!"
 }
