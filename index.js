@@ -1,26 +1,29 @@
-// Dice Image 1 
-var randomNumber1 = Math.floor(Math.random() * 6) + 1  //random no. 1 - 6
-var randomDiceImage = "dice" + randomNumber1 + ".png"  //random image dice1 to dice6
-var randomImageSource = "images/" + randomDiceImage  //random image source
-var image1 = document.querySelectorAll("img")[0]  //selecting image tag
 
-image1.setAttribute("src", randomImageSource)  //set source attribute
+var randomNumber1 = Math.floor(Math.random() * 6) + 1; //1-6
 
-// Dice Image 2 
-var randomNumber2 = Math.floor(Math.random() * 6) + 1  //random no. 1 - 6
-var randomDiceImage2 = "dice" + randomNumber2 + ".png"  //random image dice1 to dice6
-var randomImageSource2 = "images/" + randomDiceImage2  //random image source
-var image2 = document.querySelectorAll("img")[1]  //selecting image tag
+var randomDiceImage = "dice" + randomNumber1 + ".png"; //dice1.png - dice6.png
 
-image2.setAttribute("src", randomImageSource2)  //set source attribute
+var randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images/dice6.png
 
-// Change heading on conditions 
-if (randomNumber1 > randomNumber2) {    // if player1 wins 
-    document.querySelector("h1").innerHTML = "🚩 Player 1 Wins!"
+var image1 = document.querySelectorAll("img")[0];
+
+image1.setAttribute("src", randomImageSource);
+
+
+var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
+
+document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+
+
+//If player 1 wins
+if (randomNumber1 > randomNumber2) {
+  document.querySelector("h1").innerHTML = "🚩 Player 1 Wins!";
 }
-else if (randomNumber2 > randomNumber1) {     // if player2 wins
-    document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩"
-} 
-else {    // if both are same
-    document.querySelector("h1").innerHTML = "Draw!"
+else if (randomNumber2 > randomNumber1) {
+  document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
+}
+else {
+  document.querySelector("h1").innerHTML = "Draw!";
 }
