@@ -10,9 +10,21 @@
   text-align: center;
 }
 
+.dice_btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .dice {
   text-align: center;
   display: inline-block;
+}
+
+.button_container {
+  padding: 20px;
+  margin-left: 40px;
+  margin-bottom: 10px;
 }
 
 body {
@@ -36,6 +48,15 @@ p {
 
 img {
   width: 75%;
+}
+
+button {
+  padding: 8px 20px;
+  font-size: 30px;
+  font-family: "Indie Flower", cursive;
+  background-color: #393e46;
+  color: #4ecca3;
+  border-radius: 5px;
 }
 
 footer {
